@@ -12,7 +12,7 @@ const CreateThread = (props) => {
     e.preventDefault();
     const currentTime = new Date().toISOString();
     const username = localStorage.getItem("username");
-    const profile = Math.floor(Math.random() * 7);
+    const profile = Math.floor(Math.random() * 6);
 
     const thread = {
       profile: profile,
