@@ -1,0 +1,23 @@
+.threads {
+  max-width: 700px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #000000;
+  color: #fff;
+  border-left: 0.2px solid #131313;
+  border-right: 0.2px solid #131313;
+  animation: appears 0.7s ease-in forwards;
+}
+
+@keyframes appears {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

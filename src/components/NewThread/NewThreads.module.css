@@ -1,0 +1,66 @@
+.new-thread {
+  margin: 0 100px;
+  padding: 20px 0 10px;
+
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #131313;
+}
+
+.new-thread__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-thread__header-left {
+  display: flex;
+  gap: 10px;
+}
+
+.new-thread__header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  -webkit-user-drag: none;
+}
+
+.new-thread__time-ago {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.5;
+  margin-top: -4px;
+}
+
+.new-thread__content {
+  font-size: 14px;
+  margin-left: 26px;
+  margin-top: -11px;
+}
+
+.new-thread__container {
+  position: relative;
+  margin: 5px 0 5px 15px;
+  border-left: 1.5px solid #777171;
+}
+
+.new-thread__activity {
+  display: flex;
+  margin: 10px 0 0 26px;
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #777171;
+  left: -2.012px;
+}
+
+@media screen and (max-width: 700px) {
+  .new-thread {
+    padding: 20px 20px;
+    margin: 0;
+  }
+}

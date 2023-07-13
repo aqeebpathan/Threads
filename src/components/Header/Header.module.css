@@ -1,0 +1,58 @@
+.header {
+  padding: 2rem 0 1rem 0;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: appears 0.7s ease-in forwards;
+}
+
+.header img {
+  width: 100px;
+  margin: 0 auto;
+  -webkit-user-drag: none;
+}
+
+.header button {
+  position: absolute;
+  top: 48px;
+  right: 20px;
+  background: transparent;
+  border: none;
+}
+
+.header button img {
+  width: 24px;
+}
+
+.welcome {
+  font-size: 18px;
+  color: #fff;
+  padding: 0 20px;
+  animation: appears 0.7s ease-in forwards;
+}
+
+.welcome p {
+  text-align: center;
+}
+
+@keyframes appears {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 1rem 0 0rem 0;
+  }
+
+  .header button {
+    top: 31px;
+  }
+}

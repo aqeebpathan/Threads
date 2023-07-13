@@ -1,0 +1,10 @@
+.like__activity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.like__activity span {
+  font-size: 14px;
+  opacity: 0.6;
+}
