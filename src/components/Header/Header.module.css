@@ -18,6 +18,7 @@
   right: 20px;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .header button img {

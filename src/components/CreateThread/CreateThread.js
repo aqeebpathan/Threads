@@ -3,6 +3,7 @@ import { useRef } from "react";
 import closeIcon from "../../assets/close.png";
 import threadsIcon from "../../assets/threads2.png";
 import classes from "./CreateThread.module.css";
+import Modal from "../UI/Modal";
 
 const CreateThread = (props) => {
   const threadRef = useRef("");
@@ -21,28 +22,33 @@ const CreateThread = (props) => {
     };
 
     props.onCreateThread(thread);
+    props.onClose();
   };
 
   return (
-    <div className={classes.wrapper}>
-      <form onSubmit={submitHandler} className={classes.form}>
-        <div className={classes["close-btn"]}>
-          <img src={closeIcon} alt="close-icon" />
+    <div className={classes.backdrop}>
+      <Modal>
+        <div className={classes.wrapper}>
+          <form onSubmit={submitHandler} className={classes.form}>
+            <div onClick={props.onClose} className={classes["close-btn"]}>
+              <img src={closeIcon} alt="close-icon" />
+            </div>
+            <div className={classes["form-header"]}>
+              <img src={threadsIcon} alt="threads" /> <h2>Threads</h2>
+            </div>
+            <textarea
+              ref={threadRef}
+              minLength="10"
+              maxLength="200"
+              placeholder="Start a thread..."
+              required
+            />
+            <div className={classes.submit}>
+              <button>Post</button>
+            </div>
+          </form>
         </div>
-        <div className={classes["form-header"]}>
-          <img src={threadsIcon} alt="threads" /> <h2>Threads</h2>
-        </div>
-        <textarea
-          ref={threadRef}
-          minLength="10"
-          maxLength="200"
-          placeholder="Start a thread..."
-          required
-        />
-        <div className={classes.submit}>
-          <button>Post</button>
-        </div>
-      </form>
+      </Modal>
     </div>
   );
 };

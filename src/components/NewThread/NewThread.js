@@ -71,7 +71,7 @@ const NewThread = (props) => {
             src={
               username === "aqeeb"
                 ? profile
-                : `${profilePicture[props.profile]}`
+                : `${profilePicture[props.profile + 1]}`
             }
             alt="threads"
           />
