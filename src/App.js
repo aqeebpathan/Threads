@@ -4,6 +4,7 @@ import "./App.css";
 import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import Threads from "./components/Threads/Threads";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [threads, setThreads] = useState([]);
@@ -81,6 +82,7 @@ const App = () => {
       {!isLoggedIn && !username && <Login onLogin={loginHandler} />}
       {username && <Header onCreateThread={createThreadHandler} />}
       {username && <Threads threads={latestThreads} />}
+      <Footer />
     </div>
   );
 };
